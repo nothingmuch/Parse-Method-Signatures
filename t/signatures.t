@@ -93,6 +93,9 @@ my @sigs = (
     ['($x = { })',              'simple hash default'],
     ['($x = 0xf)',              'hex default'],
     ['($x = 0xfF)',             'hex default'],
+    ['($x = $self->foo)',       'method call default'],
+    ['(:$x = $self->foo)',      'named method call'],
+    ['(:$x = { $self->foo })',  'bracketed method call'],
 );
 
 my @alternative = (
